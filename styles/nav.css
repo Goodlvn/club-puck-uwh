@@ -1,0 +1,21 @@
+.navBtnContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+}
+
+.navBtn {
+  background-color: grey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
