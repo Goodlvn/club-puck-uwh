@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function Nav() {
 
     const router = useRouter();
+    const page = router.pathname;
 
     const [hoverState, setHoverState] = useState({
         news: false,
@@ -13,8 +14,6 @@ export default function Nav() {
         youth: false,
         contact: false
     })
-
-    console.log(router.pathname);
 
     const toInvertOut = () => {
         setHoverState({ ...hoverState, news: false })
@@ -33,9 +32,10 @@ export default function Nav() {
                     <div className="navBtn news"
                         onMouseEnter={() => toInvertIn()}
                         onMouseLeave={() => toInvertOut()}
+                        style={page === "/news" ? { backgroundColor: "#0958ad" } : {}}
                     >
                         <img
-                            src={(hoverState.news) ? "./images/newsInv.svg" : "./images/news.svg"} className={"newsimg"} />
+                            src={(hoverState.news || page === "/news") ? "./images/newsInv.svg" : "./images/news.svg"} className={"newsimg"} />
                     </div>
                 </Link>
             </div>
@@ -46,8 +46,9 @@ export default function Nav() {
                     <div className="navBtn learn"
                         onMouseEnter={() => { setHoverState({ ...hoverState, learn: true }) }}
                         onMouseLeave={() => { setHoverState({ ...hoverState, learn: false }) }}
+                        style={page === "/learn" ? { backgroundColor: "#0958ad" } : {}}
                     >
-                        <img src={hoverState.learn ? "./images/learnInv.svg" : "./images/learn.svg"} className="learnimg" />
+                        <img src={(hoverState.learn || page === "/learn") ? "./images/learnInv.svg" : "./images/learn.svg"} className="learnimg" />
                     </div>
                 </Link>
             </div>
@@ -58,8 +59,9 @@ export default function Nav() {
                     <div className="navBtn youth"
                         onMouseEnter={() => { setHoverState({ ...hoverState, youth: true }) }}
                         onMouseLeave={() => { setHoverState({ ...hoverState, youth: false }) }}
+                        style={page === "/youth" ? { backgroundColor: "#0958ad" } : {}}
                     >
-                        <img src={hoverState.youth ? "./images/youthInv.svg" : "./images/youth.svg"} className="youthimg" />
+                        <img src={(hoverState.youth || page === "/youth") ? "./images/youthInv.svg" : "./images/youth.svg"} className="youthimg" />
                     </div>
                 </Link>
             </div>
@@ -70,8 +72,9 @@ export default function Nav() {
                     <div className="navBtn contact"
                         onMouseEnter={() => { setHoverState({ ...hoverState, contact: true }) }}
                         onMouseLeave={() => { setHoverState({ ...hoverState, contact: false }) }}
+                        style={page === "/contact" ? { backgroundColor: "#0958ad" } : {}}
                     >
-                        <img src={hoverState.contact ? "./images/sendInv.svg" : "./images/send.svg"} className="sendimg" />
+                        <img src={(hoverState.contact || page === "/contact") ? "./images/sendInv.svg" : "./images/send.svg"} className="sendimg" />
                     </div>
                 </Link>
             </div>
