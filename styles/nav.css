@@ -33,19 +33,26 @@
   content: "test";
 }
 
+.btnWrapper {
+  position: relative;
+}
+
 .btnLabel {
   position: absolute;
   top: -3rem;
+  left: 50%;
+  transform: translate(-50%);
   text-transform: uppercase;
   transition: all 0.5s ease;
   white-space: nowrap;
   letter-spacing: 1px;
   font-weight: 500;
+  cursor: default;
 
   opacity: 0;
 }
 
-.news:hover > #news {
+/* .news:hover > #news {
   opacity: 1;
 }
 .learn:hover > #learn {
@@ -56,7 +63,7 @@
 }
 .contact:hover > #contact {
   opacity: 1;
-}
+} */
 
 .newsimg {
   width: 60%;
