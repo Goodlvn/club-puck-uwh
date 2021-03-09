@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   width: 30%;
+  min-width: 580px;
 
   position: absolute;
   bottom: 5rem;
@@ -9,7 +10,7 @@
 }
 
 .navBtn {
-  background-color: grey;
+  background-color: #ebebeb;
 
   display: flex;
   justify-content: center;
@@ -18,4 +19,57 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  position: relative;
+}
+
+.navBtn:hover {
+  background-color: orange;
+}
+
+.navBtn:hover {
+  content: "test";
+}
+
+.btnLabel {
+  position: absolute;
+  top: -3rem;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  font-weight: 500;
+
+  opacity: 0;
+}
+
+.news:hover > #news {
+  opacity: 1;
+}
+.learn:hover > #learn {
+  opacity: 1;
+}
+.youth:hover > #youth {
+  opacity: 1;
+}
+.contact:hover > #contact {
+  opacity: 1;
+}
+
+.newsimg {
+  width: 60%;
+}
+
+.learnimg {
+  width: 73%;
+}
+
+.youthimg {
+  width: 65%;
+}
+
+.sendimg {
+  width: 58%;
 }
