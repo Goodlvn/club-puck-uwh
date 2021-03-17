@@ -3,3 +3,20 @@
   bottom: 5rem;
   left: 5rem;
 }
+
+.lable {
+  font-style: italic;
+}
+
+.emailList > input {
+  height: 2.5rem;
+  width: 20rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.emailList > button {
+  height: 2.5rem;
+  width: 4rem;
+  margin-left: 1rem;
+}
