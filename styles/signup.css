@@ -2,13 +2,15 @@
   position: absolute;
   bottom: 5rem;
   left: 5rem;
+  display: flex;
+  flex-direction: row;
 }
 
-.lable {
+.label {
   font-style: italic;
 }
 
-.emailList > input {
+.emailList > div > input {
   height: 2.5rem;
   width: 20rem;
   margin-top: 0.5rem;
@@ -19,4 +21,50 @@
   height: 2.5rem;
   width: 4rem;
   margin-left: 1rem;
+}
+
+.emailSub {
+  transition: all 500ms ease-out;
+}
+
+.submitBtn {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  border: 1px solid #29292b;
+  transition: all 300ms ease-in;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.errorLabel {
+  color: red;
+}
+
+.loader {
+  width: 1.5rem;
+}
+
+.loadData {
+  background-color: #5975fb;
+}
+
+.code200 {
+  background-color: green;
+}
+
+.codeRed {
+  background-color: red;
+}
+
+.subStatC {
+  width: 30%;
+}
+
+.subStatX {
+  width: 20%;
 }
